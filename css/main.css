@@ -545,4 +545,5 @@ header .badges .badge {
   width: 100px;
   height: 100px;
   background-color: tomato;
+  display: inline;
 }
