@@ -452,10 +452,16 @@ header .badges .badge {
   font-size: 30px;
 }
 
-.promotion {
+.notice .promotion {
   background-color: #f6f5ef;
   height: 693px;
   position: relative;
+  transition: height .4s;
+  overflow: hidden;
+}
+
+.notice .promotion.hide {
+  height: 0;
 }
 
 .promotion .swiper-container {

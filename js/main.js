@@ -162,7 +162,7 @@ new Swiper('.promotion .swiper-container', {
 
 /* 목표 : notice-line 우측의 스타벅스 프로모션 버튼을 눌렀을 때 
 밑에 있는 promotion 요소가 사라졌다 나타났다 하는 효과 발생 */
-const promotionEl = document.querySelector('.promorion')
+const promotionEl = document.querySelector('.promotion')
 // 효과를 적용시키려는 요소인 '.promotion'을 찾아서 변수에 할당한다
 const promotionToggleBtn = document.querySelector('.toggle-promotion')
 // 효과 적용을 실행하는 버튼 역할인 '.toggle-promotion'을 찾아서 변수 할당한다
@@ -176,9 +176,9 @@ promotionToggleBtn.addEventListener('click', function(){
 // false의 반대값인 true를 isHidePromotion에 할당해라.
   if (isHidePromotion){ // -> 여기의 isHidePromotion의 값은 true임. 왜? 이미 위에서 클릭 되어있으니까!
 // 만약 ()안에 true값이 들어오면..
-      promotionEl.classList.add('.hide');
+      promotionEl.classList.add('hide');
 // promotionEl에 hide라는 클래스를 추가해라. 사라지는 효과 자체는 css에서 처리
   } else {
-      promotionEl.classList.remove('.hide');
+      promotionEl.classList.remove('hide');
   }
 });
