@@ -182,3 +182,35 @@ promotionToggleBtn.addEventListener('click', function(){
       promotionEl.classList.remove('hide');
   }
 });
+
+
+/* 목표: youtube 영상 위로 떠다니는 이미지 요소 넣고 애니메이션 효과 적용*/
+
+/* 아래 함수는 랜덤한 숫자를 생성하는 함수로서, 아직 이해하기엔 어려우니 
+차후에 JS시간에 배우기로 함. */
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+
+function floatingObject (selector, delay, size) {
+/* 선택자(selector)를 매겨변수로 하는 floatingObject라는 함수 생성*/
+// gsap.to(요소, 지속시간, {옵션-대부분객체});
+  gsap.to(
+    selector,   // -> 선택자(.floating1 ~ 3까지 각각 선택됨)
+    random(1, 2), // -> 애니메이션 동작 시간(1초~2초사이 랜덤)
+    { 
+      y: size, // -> 수직으로 이동(10혹은20혹은15px)
+      repeat: -1,  // -> 반복횟수 무한(-1), 여기까지 하면 애니메이션이 어색함
+      yoyo: true,   // -> 재생했던 애니메이션을 역재생 한다, 좀더 부드러운 효과
+      ease: Power1.easeInOut,
+      /* greensock.com의 easing함수를 가져와서 통통튀는 효과를 아예 제거함*/
+      delay: random(0, delay)  // -> 지연시간 (0초~1혹은1.5혹은0.5초)
+  }
+  );
+}
+floatingObject ('.floating1', 1, 10);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
+floatingObject ('.floating2', 1.5, 20);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
+floatingObject ('.floating3', .5, 15);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
