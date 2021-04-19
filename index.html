@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starbucks Coffee Korea</title>
 
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Starbucks" />
   <meta property="og:title" content="Starbucks Coffee Korea" />
   <meta property="og:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
   <meta property="og:image" content="./images/starbucks_seo.jpg" />
   <meta property="og:url" content="https://starbucks.co.kr" />
-
+  
+  <!-- TWEETER CARD -->
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:site" content="Starbucks" />
   <meta property="twitter:title" content="Starbucks Coffee Korea" />
@@ -21,14 +23,19 @@
   <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
   <meta property="twitter:url" content="https://starbucks.co.kr" />
 
-  <link rel="icon" href="./favicon.png">
+  <!-- FAVICON -->
   <!--만약 루트경로에 favicon.ico파일이 있다면 브라우저는 그 파일을 자동으로 불러올것임 
-  그러나 그런경우가 아니거나 .png파일로 고해상도 아이콘을 쓰고 싶다면 링크태그로 따로 설정해야함-->
+    그러나 그런경우가 아니거나 .png파일로 고해상도 아이콘을 쓰고 싶다면 링크태그로 따로 설정해야함-->
+  <link rel="icon" href="./favicon.png">
+
+  <!-- CSS RESET -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <!-- GOOGLE ICON -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <!-- MAIN.CSS -->
   <link rel="stylesheet" href="./css/main.css">
 
   <!-- SWIPER -->
@@ -37,7 +44,11 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <script defer src="js/main.js"></script>
+
+  <!-- YOUBUBE.JS -->
+  <script defer src="./js/youtube.js"></script>
+  <!-- MAIN.JS -->
+  <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -495,6 +506,15 @@
 
     </div>
   </section>
+
+  <!-- YOUTUBE VIDEO -->
+  <section class="youtube">
+    <div class="youtube__area">
+      <div id="player"></div>
+    </div>
+    <div class="youtube__cover"></div>
+  </section>
+
 </body>
 
 </html>
