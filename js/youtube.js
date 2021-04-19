@@ -21,9 +21,9 @@ function onYouTubeIframeAPIReady() {
     html내의 player라고 지정한 id선택임. 그리고 아래와 같이 옵션을 추가한다*/
     videoId: 'An6LvWQuj_8', // <-최초 재생할 영상 id를 확인해서 입력
     playerVars: {
-      autoPlay: true,
+      autoplay: true,
       loop: true,
-      playList: 'An6LvWQuj_8' // 재생을 반복할 영상 id목록 
+      playlist: 'An6LvWQuj_8' // 재생을 반복할 영상 id목록 
     },
     events: {
       onReady: function (event) {

@@ -7,7 +7,6 @@ body {
   line-height: 1.4;
   /* 행간이 통상 1.4배면 글자 읽는데 불편없이 무난함, 글꼴에 따라 다를 수 있음*/
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
 }
 
 img {
@@ -661,8 +660,65 @@ header .badges .badge {
   left: 150px;
 }
 
-.youtube .floating3 {
+
+/* SEASON PRODUCT */
+
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+  position: relative;
+}
+
+.season-product .inner {
+  height: 400px;
+}
+
+
+.season-product .floating3 {
   position: absolute;
-  bottom: -200px;
+  top: -200px;
+  right: 0;
+}
+
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+
+.season-product .text-group .more {}
+
+/* RESERVE COFFEE */
+
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg")
+}
+
+.reserve-coffee .inner {
+  height: 400px;
+}
+
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+
+.reserve-coffee .reserve-product {
+  position: absolute;
+  top: 0;
   right: 0;
 }

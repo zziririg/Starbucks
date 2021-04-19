@@ -146,7 +146,7 @@ new Swiper('.promotion .swiper-container', {
   centeredSlides: true,  // 첫 슬라이드가 가운데에서(왼쪽말고) 시작하도록 지정
   loop: true,
   autoplay: {
-    delay: 5000  // autoplay의 지연시간 : 5초
+    delay: 2000  // autoplay의 지연시간 : 2초
   },
   pagination: {  // 페이지 번호 매기기 
     el: '.promotion .swiper-pagination', //  페이지 번호 요소 선택자
