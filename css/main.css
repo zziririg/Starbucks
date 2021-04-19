@@ -7,6 +7,7 @@ body {
   line-height: 1.4;
   /* 행간이 통상 1.4배면 글자 읽는데 불편없이 무난함, 글꼴에 따라 다를 수 있음*/
   font-family: 'Nanum Gothic', sans-serif;
+  height: 6000px;
 }
 
 img {
@@ -721,4 +722,34 @@ header .badges .badge {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+
+.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+
+.pick-your-favorite .text-group {
+  width: 362px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 100px;
+}
+
+.pick-your-favorite .title {
+  margin-bottom: 40px;
+}
+
+.pick-your-favorite .description {
+  margin-bottom: 40px;
 }
