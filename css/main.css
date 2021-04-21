@@ -760,8 +760,8 @@ header .badges .badge {
   background-image: url("../images/reserve_store_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .reserve-store .inner {
@@ -782,8 +782,9 @@ header .badges .badge {
   width: 334px;
   height: 334px;
   backface-visibility: hidden;
-  transition: 1s;
   position: absolute;
+  transition: 1s;
+
 }
 
 .reserve-store .medal .front {
@@ -791,7 +792,7 @@ header .badges .badge {
 }
 
 
-.reserve-store:hover .medal .front {
+.reserve-store .medal:hover .front {
   transform: rotateY(-180deg);
 }
 
@@ -799,11 +800,9 @@ header .badges .badge {
   transform: rotateY(180deg);
 }
 
-
-.reserve-store:hover .medal .back {
+.reserve-store .medal:hover .back {
   transform: rotateY(0deg);
 }
-
 
 .reserve-store .medal .back .btn {
   position: absolute;
