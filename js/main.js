@@ -214,3 +214,20 @@ function floatingObject (selector, delay, size) {
 floatingObject ('.floating1', 1, 10);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
 floatingObject ('.floating2', 1.5, 20);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
 floatingObject ('.floating3', .5, 15);  // -> 함수 실행, 인수(넣을 선택자)는 .floating
+
+
+
+/* 목표 : 스크롤로 내리다가 해당 섹션에 도착했을때 숨겨져있던 요소들이 등장*/
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+// .selection.scroll-spy 요소들을 찾아서 spyEls 변수로 할당 
+spyEls.forEach(function (spyEl) {
+// 각각의 spyEl들에게 아래 함수를 명령함
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정(트리거 대상 요소)
+      triggerHook: .8  // 뷰포트 상단(0)과 하단(1)의 사잇값으로 트리거 위치를 지정
+    }) // spyEl이 트리거에 걸리면 아래의 메소드가 실행 된다.
+    .setClassToggle(spyEl, 'show') // sptEl에 show라는 클래스를 넣었다 뺐다 할거다
+    .addTo(new ScrollMagic.Controller()); // 위의 옵션들을 컨트롤러에 할당해서 동작하게 하겠다.
+}); 
