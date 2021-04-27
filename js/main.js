@@ -243,3 +243,5 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller()); // 위의 옵션들을 컨트롤러에 할당해서 동작하게 하겠다.
 }); 
 
+const thisYear = document.querySelector('.this-year')
+thisYear.textContent = new Date().getFullYear();  //2021
