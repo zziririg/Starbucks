@@ -158,6 +158,17 @@ new Swiper('.promotion .swiper-container', {
     }
 });
 
+new Swiper('.awards .swiper-container', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  autoplay: true,
+  loop: true,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+    }
+});
+
 
 
 /* 목표 : notice-line 우측의 스타벅스 프로모션 버튼을 눌렀을 때 
@@ -231,3 +242,4 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // sptEl에 show라는 클래스를 넣었다 뺐다 할거다
     .addTo(new ScrollMagic.Controller()); // 위의 옵션들을 컨트롤러에 할당해서 동작하게 하겠다.
 }); 
+
