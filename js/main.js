@@ -47,6 +47,10 @@ searchInputEl.addEventListener('blur', function () {
 const badgeEl = document.querySelector('header .badges');
 // html내에서 querySelector를 이용해 header안에 .badges라는 클래스의 정보를 
 // badgeEl 이라는 변수에 넣어 만든다
+const toTopEl = document.querySelector('#to-top'); 
+//html의 #to-top을 toTopEl에 할당
+
+
 
 // window.addEventListener('scroll', function () {
 //   console.log('scroll!');
@@ -72,14 +76,31 @@ window객체에 addEventListener로 이벤트 추가할건데, scroll이 발생�
       opacity: 0,  // 투명하게 하겠다
       display: 'none'  // 요소자체를 없애겠다
     });
-    // 배지 서서히 나타내기
+  // '상단으로' 버튼 보이기
+    gsap.to(toTopEl, .2, {
+      x: 0
+  });
+
   }   else {
-    gsap.to(badgeEl, 1 ,{
-      opacity: 1,  //불투명하게(나타나게) 하겠다
-      display: 'block'  //요소자체를 나타내겠다
-    });
+      // 배지 서서히 나타내기
+      gsap.to(badgeEl, 1 ,{
+        opacity: 1,  //불투명하게(나타나게) 하겠다
+        display: 'block'  //요소자체를 나타내겠다
+      });
+  //'상단으로' 버튼 숨기기
+      gsap.to(toTopEl, .2, {
+        x: 100
+      });
   }
 }, 300));
+
+
+toTopEl.addEventListener('click', function() {  //toTopEl가 클릭되면
+  gsap.to(window, .7, {   //화면내에서 0.7초 동안
+    scrollTo: 0  //화면의 위치를 0px지점으로 옮겨준다
+  })
+}
+);
 
 /* 애니메이션을 담당하는 라이브러리인 gsap을 이용해서 badgeEl를 서서히 숨기고
 나타나게 해줬다(opacity). 라이브러리는 외부에서 검색을 통해 코드복사해서 head부분의
@@ -243,5 +264,10 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller()); // 위의 옵션들을 컨트롤러에 할당해서 동작하게 하겠다.
 }); 
 
+
+/* 목표 : footer내 년도 표시를 자동으로 바뀌도록 하는 함수 설정 */
 const thisYear = document.querySelector('.this-year')
 thisYear.textContent = new Date().getFullYear();  //2021
+/* thisYear변수에 글자내용을 지정(혹은 선택)할건데(textContent)
+Data라는 생성자의 getFullYear에서 현재 년도를 뽑아내서 thisYear변수에 할당하고
+html의 .this-year요소에 나타나게 하겠다. */
