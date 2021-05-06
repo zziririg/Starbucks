@@ -232,8 +232,6 @@ header .main-menu {
   z-index: 1;
 }
 
-header .main-menu .item {}
-
 header .main-menu .item .item__name {
 
   padding: 10px 20px 34px 20px;
@@ -381,8 +379,6 @@ header .badges .badge {
 }
 
 /* NOTICE */
-
-.notice {}
 
 .notice-line {
   position: relative;
@@ -725,8 +721,6 @@ header .badges .badge {
 .season-product .text-group .description {
   margin-bottom: 15px;
 }
-
-.season-product .text-group .more {}
 
 /* RESERVE COFFEE */
 
